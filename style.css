@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'minha fonte';
+    src:url("Fonte/NotoSansSymbols-ExtraLight.ttf");
+ }
+
+ 
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'minha fonte', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#0c3f5d,#452750,#355b63, #111010);
+}
+
+#container {
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    background-color: rgba(5, 5, 5, .3);
+    border-radius: 10px;
+    box-shadow: 20x 20px 50px rgba(0, 0, 0, .5);
+      
+}
+
+#infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#infos p{
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    font-size: 2em;
+    color: whitesmoke;
+}
+
+#display {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#cronometro {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    font-size: 6em;
+    color: whitesmoke;
+    display: none;
+}
+
+#dsema {
+    display: none;
+}
+
+#display p{
+    width: 200px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    color: whitesmoke;
+}
+
+#horas, #minutos {
+    font-size: 6em;
+    
+}
+
+#segundos {
+    font-size: 3.5em;
+}
+
+#mensagem {
+    display: none;
+}
+
+#img {
+    display: none;
+}
+
+#cron {
+    display: none;
+    
+    
+}
+
+
+
+/* MEDIA */
+
+@media screen and (min-width: 700px) {
+    #container {
+        width: 700px;   
+    }
+
+    #img {
+        width: 700px;
+    }
+
+    #infos {
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 10px;
+    }
+
+    #display {
+        flex-direction: row;
+        width: 400px;
+        margin-left: 21%;
+    }
+
+    #horas {
+        margin-right:  -50px;
+        width: 1px;
+    }
+
+    #segundos {
+        font-size: 6em;
+    }
+
+    #horas::after, #minutos::after {
+        content: ':';
+    }
+
+    #dsema {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1em;
+        color: white;
+        margin-top: 10px;
+        border-bottom: .9px solid rgb(158, 158, 158);
+    }
+
+    .fa-solid {
+        cursor: pointer;
+    }
+
+    .fa-solid:hover{
+        color: bisque;
+    }
+
+    #container:hover{
+        background: linear-gradient(to right, rgba(5, 5, 5, .3), rgba(255, 255, 255, .1));
+    }
+
+    #mensagem {
+        display: block;
+        margin-top: 10vh;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: .5em;
+        font-weight: bold;
+    }
+
+    #cron {
+        display: flex;
+        margin-top: 30px;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.5em;
+        margin-top: 20px;
+        color: whitesmoke;
+    }
+
+    #cronometro {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+   
+}
+
+@media screen and (min-width: 1050px) {
+
+    #container {
+        width: 1000px;    
+    }
+
+    #img {
+        display: flex;
+        width: 1000px;
+        height: 500px;
+        border-radius: 10px;
+        opacity: 0.4;
+        position: absolute;       
+    }
+
+    #display {
+        margin-left: 30%;
+    }
+
+    body {
+        font-weight: bold;
+        
+    }
+
+    #cron {
+        margin-top: 50px;
+        position: relative;
+    }
+
+
+}
